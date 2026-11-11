@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --color-primary: #D4516A;
+  --color-primaryhover: #B84359;
+  --color-softpink: #FFF5F7;
+  --color-peachyyellow: #FFF8E7;
+  --color-lightblue: #F0F4FF;
+  --color-pinkgradientstop: #FFE5EC;
+  --color-skybluegradientstop: #E5F4FF;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-playfair-display);
+
+  --color-primary: #D4516A;
+  --color-primaryhover: #B84359;
+  --color-softpink: #FFF5F7;
+  --color-peachyyellow: #FFF8E7;
+  --color-lightblue: #F0F4FF;
+  --color-pinkgradientstop: #FFE5EC;
+  --color-skybluegradientstop: #E5F4FF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
