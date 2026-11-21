@@ -135,14 +135,14 @@ The strongest points of the site will be:
     - active: bool
 
 - product_material
-    material_id: foreignkey(material)
-    product_id: foreignkey(product)
+    - material_id: foreignkey(material)
+    - product_id: foreignkey(product)
 
 - material (catalog)
-    values:
-        id: int
-        name: varchar
-    catalog:
+    - values:
+        - id: int
+        - name: varchar
+    - catalog:
         - mdf
         - pino
         - etc

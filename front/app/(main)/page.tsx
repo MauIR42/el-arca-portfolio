@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "./components/ui/button";
+import { Button } from "../components/ui/button";
 import { FaArrowRight } from "react-icons/fa";
 import { IoHammerOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
@@ -65,10 +65,10 @@ export default function Home() {
                 de todo tipo, te traemos tus proyectos de madera
                 a la realidad con dedicación y técnica.</h3>
                 <div className="flex gap-7">
-                  <Button className="py-3 px-4 bg-primary hover:bg-primaryhover text-white font-bold py-2 px-4 rounded-full mt-4">
+                  <a href="gallery" className="cursor-pointer py-3 px-4 bg-primary hover:bg-primaryhover text-white font-bold py-2 px-4 rounded-full mt-4">
                     Ve nuestra galería
-                    <FaArrowRight className="ml-2" />
-                  </Button>
+                    <FaArrowRight className="ml-2 inline" />
+                  </a>
                   <Button className="py-3 px-4  bg-white text-gray-700 hover:bg-gray-100 font-bold py-2 px-4 rounded-full mt-4">
                     Contáctanos
                   </Button>
@@ -105,10 +105,10 @@ export default function Home() {
             <ExampleCard title="Decoraciones para la casa" description="Bonitos portaretratos, soportes para la cocina o balcón" imageSrc="/images/creation3.jpg" />
           </div>
           <div className="flex justify-center mt-8">
-            <Button className="py-3 px-4 bg-primary hover:bg-primaryhover text-white font-bold py-2 px-4 rounded-full mt-4">
+            <a href="gallery" className="cursor-pointer py-3 px-4 bg-primary hover:bg-primaryhover text-white font-bold py-2 px-4 rounded-full mt-4">
               Ve nuestra galería
-              <FaArrowRight className="ml-2" />
-            </Button>
+              <FaArrowRight className="ml-2 inline" />
+            </a>
           </div>
         </section>
         {/* landing */}

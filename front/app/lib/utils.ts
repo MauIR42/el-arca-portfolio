@@ -30,3 +30,8 @@ export const generatePagination = (currentPage: number, totalPages: number) => {
     totalPages,
   ];
 };
+
+
+export const removeFromArray = (array: any[], value: any) => {
+  return array.filter((item) => item !== value);
+}

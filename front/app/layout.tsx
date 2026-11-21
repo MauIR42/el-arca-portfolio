@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { MainNav } from "./components/layout/main-nav";
+import  MainNav  from "./components/layout/main-nav";
 import { Footer } from "./components/layout/footer";
 
 const inter = Inter({
@@ -25,10 +25,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable}  h-full antialiased`}
     >
-      <body className="min-h-dvh flex flex-col">
-        <MainNav />
+      <body className="min-h-dvh flex flex-col bg-gradient-to-br from-[#FFE5EC] to-[#E5F4FF]">
+        {/* <MainNav /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
