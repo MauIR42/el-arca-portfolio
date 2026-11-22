@@ -41,6 +41,7 @@
         - manage orders: for sellers
 
 - roles_permissions:
+    - composite_key: (role, permissions)
     - role_id: foreignkey(role)
     - permissions_id foreignkey(permissions)
 
@@ -48,16 +49,20 @@
     - id : number
     - status : foreignkey( order_status )
     - total_paid: int
-    - final price: int
     - client_id: foreignkey(user)
     - review: varchar
     - seller_id: foreignkey(user)
-    - estimated_delivery_date: timestamp
+    - can_share: bool
     - delivery_date: timestamp
+
+- quote:
+    - id: int
+    - order_id: foreignKey(order)
+    - final_price: int
+    - estimated_delivery_date: timestamp
+    - version: int
     - notes: varchar
     - minimum_payment: int
-    - can_share: bool
-    - version: int
 
 - order_status (catalog)
     values:
@@ -139,9 +144,10 @@
     - created at: timestamp
     - updated at: timestamp
 
-- order_item
-    - order_id: foreignKey(order)
+- quote_item
+    - quote_id: foreignKey(quote)
     - product_id: foreignKey(product)
+    - id: int
     - description: varchar
     - image_reference (image in S3): varchar
     - customizations (search for an front end engine to design easily some products): color, size, pattern, etc.: JSON
@@ -150,8 +156,8 @@
     - material_id: foreignkey(material)
     - active: bool
 
-- order_reference
+- order_item_reference
     - id: int
     - storage_key: varchar(255) (for S3)
-    - order_id: foreignKey(order_item)
+    - order_item_id: foreignKey(order_item)
     - note: varchar(255)
