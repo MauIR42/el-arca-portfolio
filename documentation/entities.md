@@ -54,6 +54,7 @@
     - seller_id: foreignkey(user)
     - can_share: bool
     - delivery_date: timestamp
+    - current_quote: foreignKey(quote)
 
 - quote:
     - id: int
